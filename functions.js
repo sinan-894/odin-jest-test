@@ -42,7 +42,6 @@ function caesarEncrypt(char='',offset){
 
     if(123>char.charCodeAt(0) && char.charCodeAt(0)>96){
         offset = (char.charCodeAt(0)-97+offset)%26
-        console.log(offset,String.fromCharCode(95+offset)) 
         return String.fromCharCode(97+offset)
     }
     else if(91>char.charCodeAt(0) && char.charCodeAt(0)>64){
@@ -52,5 +51,20 @@ function caesarEncrypt(char='',offset){
     else{
         return char
     }
+}
+
+export function analyzeArray(array=[]){
+    let min = array[0],max = array[0] 
+    const sum = array.reduce((prev,curr)=>prev+curr,0)
+    console.log(array,array.length)
+    const average = sum/ array.length;
+    (()=>{
+        array.forEach(num=>{
+            if(num<min) min = num
+            else if(num>max) max = num
+        })
+    })()
+    
+    return {average,min,max,length:array.length}
 }
 

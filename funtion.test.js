@@ -1,4 +1,4 @@
-import { capitalize,reverseString,Calculator,caesarCipher } from "./functions";
+import { capitalize,reverseString,Calculator,caesarCipher,analyzeArray } from "./functions";
 
 
 
@@ -23,5 +23,14 @@ test('Ceaser Cipher',()=>{
     expect(caesarCipher('xyz', 3)).toBe('abc')
     expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
     expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+})
+
+test('Analyze Array',()=>{
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+     })
 })
 
