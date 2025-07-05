@@ -1,4 +1,4 @@
-import { capitalize,reverseString,Calculator } from "./functions";
+import { capitalize,reverseString,Calculator,caesarCipher } from "./functions";
 
 
 
@@ -18,3 +18,10 @@ test('Calculator',()=>{
     expect(calculator.subtract(7,4)).toBe(3)
     expect(calculator.divide(4,2)).toBe(2)
 })
+
+test('Ceaser Cipher',()=>{
+    expect(caesarCipher('xyz', 3)).toBe('abc')
+    expect(caesarCipher('HeLLo', 3)).toBe('KhOOr')
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!')
+})
+
