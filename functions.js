@@ -10,3 +10,12 @@ export function capitalize(string=""){
     return wordArray.join(' ')
 
 }
+
+export function reverseString(string){
+    let reversedStringResult = ""
+    for(let i = 0;i<string.length;i++){
+        reversedStringResult = string[i] + reversedStringResult
+    }
+
+    return reversedStringResult
+}
