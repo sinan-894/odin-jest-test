@@ -19,3 +19,12 @@ export function reverseString(string){
 
     return reversedStringResult
 }
+
+export function Calculator(){
+    const add = (a,b)=>a+b
+    const subtract = (a,b)=>a-b
+    const multilply = (a,b)=>a*b
+    const divide = (a,b)=>a/b 
+
+    return {add,subtract,multilply,divide}
+}
